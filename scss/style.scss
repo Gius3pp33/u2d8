@@ -1,0 +1,141 @@
+@import 'partials/reset';
+@import 'partials/colors';
+@import 'partials/fonts';
+@import 'partials/spacings';
+@import 'partials/buttons';
+@import 'partials/mixins';
+@import 'partials/animations';
+
+
+
+
+body {
+  font-family: $primary-font;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+header {
+  width: 100%;
+
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    
+
+
+    .logo {
+      font-size: 1.5rem;
+      color: $text-color;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+
+      a {
+        color: black;
+        text-decoration: underline;
+        
+      }
+    }
+  }
+
+  .hero-content {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-color: $bg-hero;
+    @include flex-center;
+
+    .text {
+      flex: 1;
+      @include title-big;
+      @include fade-in;
+
+      p {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .buttons {
+        margin-top: 1rem;
+        display: flex;
+        gap: 1rem;
+
+        button {
+          padding: 0.75rem 1.5rem;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: transform 0.3s;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+
+        .button-Scopri-di-più {
+          background-color: $btn-primary;
+          color: $text-color;
+
+          &:hover {
+            background-color: darken($btn-primary, 10%);
+          }
+        }
+
+        .button-Accedi {
+          background-color: $btn-secondary;
+          color: $text-color;
+
+          &:hover {
+            background-color: darken($btn-secondary, 20%);
+          }
+        }
+
+        .button-Contattaci {
+          background-color: $btn-tertiary;
+          color: $text-color;
+
+          &:hover {
+            background-color: darken($btn-tertiary, 10%);
+          }
+        }
+      }
+    }
+
+    .image {
+      flex: 1;
+      @include fade-in;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background-color: #fff;
+  padding: 5rem;
+
+  .grid-item {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: black;
+    @include flex-center;
+
+  }
+}
