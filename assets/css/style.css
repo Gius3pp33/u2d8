@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -175,11 +174,11 @@ header .hero-content .text .buttons button {
 header .hero-content .text .buttons button:hover {
   transform: scale(1.05);
 }
-header .hero-content .text .buttons .button-Scopri-di-più {
+header .hero-content .text .buttons .button-Scopri {
   background-color: #0e6cff;
   color: #f4f4f4;
 }
-header .hero-content .text .buttons .button-Scopri-di-più:hover {
+header .hero-content .text .buttons .button-Scopri:hover {
   background-color: #0055da;
 }
 header .hero-content .text .buttons .button-Accedi {
